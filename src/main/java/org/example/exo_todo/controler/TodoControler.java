@@ -21,19 +21,15 @@ public class TodoControler {
     @ResponseBody
     public List<Todo> getTodosJson() {  return todoService.getTodos();  }
 
-    @RequestMapping("todo/{name}/json")
-    @ResponseBody
-    public Todo getTodoJson(@RequestParam String name) {    return todoService.getTodo(name);   }
-
-    @RequestMapping("/todo")
+    @RequestMapping("/todos")
     public String getTodos(Model model) {
         model.addAttribute("todos", todoService.getTodos());
         return "todos";
     }
 
-    @RequestMapping("todo/{name}")
-    public String getTodo(@RequestParam String name, Model model) {
-        model.addAttribute("todo", todoService.getTodo(name));
+    @RequestMapping("/todo")
+    public String getTodo(Model model) {
+        model.addAttribute("todo", todoService.getTodo());
         return "todo";
     }
 }

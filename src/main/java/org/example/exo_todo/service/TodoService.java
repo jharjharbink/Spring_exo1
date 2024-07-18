@@ -23,11 +23,8 @@ public class TodoService {
         return todos;
     }
 
-    public Todo getTodo(String name) {
-        for (Todo todo : todos)
-            if (todo.getName().equals(name))
-                return todo;
-        return null;
+    public Todo getTodo() {
+        return todos.get(0);
     }
 
 
