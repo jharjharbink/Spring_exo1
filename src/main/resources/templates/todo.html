@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+</head>
+<body>
+<h1>Todo ça ressemble à Toto </h1>
+<hr>
+<p>Nom : <span th:text="${todo.getName()}"></span> </p>
+<p>Description : <span th:text="${todo.getDescription()}"></span> </p>
+<p>Etat : <span th:text="${todo.isDone()()}"></span> </p>
+
+</body>
+</html>

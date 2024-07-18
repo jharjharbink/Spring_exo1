@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+</head>
+<body>
+<h1>Todo ça ressemble à Toto </h1>
+
+<hr>
+
+<p th:if="${todos.isEmpty()}">Liste Vide !!!</p>
+
+<ul th:unless="${todos.isEmpty()}">
+    <li th:each="t : ${todos}"> <span th:text="${t.getName()}"></span> <span th:text="${t.getDescription()}"></span> <span th:text="${t.isDone()}"></span> </li>
+</ul>
+
+</body>
+</html>
+
